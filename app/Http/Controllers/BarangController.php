@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\BarangRequest;
 
 class BarangController extends Controller
 {
@@ -21,8 +21,10 @@ class BarangController extends Controller
         ]);
     }
 
-    public function simpan(Request $req)
+    public function simpan(BarangRequest $req)
     {
+        $req->validated();
+        
         return $req;
     }
 

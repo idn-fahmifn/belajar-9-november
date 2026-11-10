@@ -13,14 +13,24 @@
         <div class="">
             <label for="">Nama Barang</label>
             <input type="text" name="nama_barang" required>
+            @error('nama_barang')
+            <span style="color: #ff0000;">{{$message}}</span>
+            @enderror
+
         </div>
         <div class="">
             <label for="">Brand</label>
             <input type="text" name="brand" required>
+            @error('brand')
+            <span style="color: #ff0000;">{{$message}}</span>
+            @enderror
         </div>
         <div class="">
             <label for="">Harga Barang</label>
             <input type="number" name="harga" required>
+            @error('harga')
+            <span style="color: #ff0000;">{{$message}}</span>
+            @enderror
         </div>
 
         <button type="submit">Kirim Barang</button>
