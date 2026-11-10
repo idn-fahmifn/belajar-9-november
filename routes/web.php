@@ -24,7 +24,7 @@ Route::prefix('belajar')->group(function () {
 });
 
 // memanggil fungsi yang ada di dalam controller : 
-Route::get('/barang', [BarangController::class, 'halamanUtama'])->name('halaman.barang');
+Route::get('/barang', [BarangController::class, 'halamanUtama'])->middleware('age')->name('halaman.barang');
 Route::post('/barang', [BarangController::class, 'simpan'])->name('simpan.barang');
 
 Route::resource('/photos', PhotosController::class);

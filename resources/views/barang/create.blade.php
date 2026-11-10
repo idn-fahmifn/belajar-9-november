@@ -12,7 +12,7 @@
     <form action="{{route('simpan.barang')}}" method="post">
         <div class="">
             <label for="">Nama Barang</label>
-            <input type="text" name="nama_barang" required>
+            <input type="text" name="nama_barang" required value="{{ old('nama_barang') }}">
             @error('nama_barang')
             <span style="color: #ff0000;">{{$message}}</span>
             @enderror
@@ -20,14 +20,14 @@
         </div>
         <div class="">
             <label for="">Brand</label>
-            <input type="text" name="brand" required>
+            <input type="text" name="brand" required value="{{ old('brand') }}">
             @error('brand')
             <span style="color: #ff0000;">{{$message}}</span>
             @enderror
         </div>
         <div class="">
             <label for="">Harga Barang</label>
-            <input type="number" name="harga" required>
+            <input type="number" name="harga" required value="{{ old('harga') }}">
             @error('harga')
             <span style="color: #ff0000;">{{$message}}</span>
             @enderror

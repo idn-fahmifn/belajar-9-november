@@ -9,7 +9,11 @@
     <h1>Hallo weclome</h1>
     <p>Saya sedang belajar Laravel</p>
 
-    <a href="{{route('string-fahmi')}}">Ke halaman fahmi</a>
+    @if (session('messages'))
+        <span style="color: #ff0000;">{{session('messages')}}</span>
+    @endif
+
+    <a href="{{route('halaman.barang')}}">Ke halaman fahmi</a>
 
 </body>
 </html>
